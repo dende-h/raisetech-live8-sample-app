@@ -16,6 +16,7 @@ gem 'ranked-model'
 gem 'slim-rails'
 gem 'msgpack', '~> 1.4', '>= 1.4.2'
 gem "aws-sdk-s3", require: false
+gem 'aws-sdk-secretsmanager'
 gem 'image_processing', '~> 1.2'
 gem 'unicorn'
 gem 'net-smtp'
