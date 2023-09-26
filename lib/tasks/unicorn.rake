@@ -5,7 +5,7 @@
    desc "Start unicorn"
    task(:start) {
      config = Rails.root.join('config', 'unicorn.rb')
-     sh "unicorn -c #{config} -E production -D"
+     sh "unicorn -c #{config} -E development -D"
    }
  
    desc "Stop unicorn"
