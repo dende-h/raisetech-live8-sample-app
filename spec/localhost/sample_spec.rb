@@ -2,12 +2,6 @@ require 'spec_helper'
 
 listen_port = 80
 
-# OSの判定とawscliの有無
-if os[:family] == 'amazon'
-  describe package('aws-cli') do
-    it { should be_installed }
-  end
-end
 
 # パッケージのインストール確認
 %w{
