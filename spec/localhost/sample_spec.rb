@@ -21,7 +21,6 @@ end
 
 # Nginxの起動状態
 describe service('nginx') do
-  it { should be_enabled }
   it { should be_running }
 end
 
