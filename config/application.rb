@@ -18,12 +18,15 @@ require "sprockets/railtie"
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
-Figaro.load
+
 
 module RaisetechLive8SampleApp
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
+    Figaro.load
+    config.action_mailer.asset_host = Figaro.env.asset_host
+    config.action_mailer.default_url_options = {host: Figaro.env.domain}
 
     # Configuration for the application, engines, and railties goes here.
     #
